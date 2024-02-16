@@ -11,27 +11,32 @@ h1 {
     color: #007bff;
     text-align: center;
     margin-top: 1rem;
+    animation: fadeIn 1s ease-in-out;
 }
 
 h2 {
     font-size: 2rem;
     color: #007bff;
     margin-top: 1.5rem;
+    animation: fadeIn 1s ease-in-out;
 }
 
 header {
     font-size: 1rem;
     line-height: 1.5;
+    animation: fadeIn 1s ease-in-out;
 }
 
 img {
     border-radius: 50%;
     margin-top: 1rem;
+    animation: scaleIn 1s ease-in-out;
 }
 
 ul {
     list-style: none;
     padding: 0;
+    animation: fadeIn 1s ease-in-out;
 }
 
 li {
@@ -46,13 +51,45 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    animation: slideInUp 1s ease-in-out;
 }
 
 a {
     color: #007bff;
     text-decoration: none;
+    transition: color 0.3s ease-in-out;
 }
 
 a:hover {
     text-decoration: underline;
+    color: #0056b3;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
 }
